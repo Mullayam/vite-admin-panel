@@ -11,7 +11,7 @@ const LayoutSidebar = () => {
       <div className="overflow-y-auto py-5 px-3 h-full ">
         <SidebarListItems />
       </div>
-      <div className="hidden absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-transparent z-20">
+      <div className="absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full lg:flex bg-transparent z-20">
         <SidebarBottomPanel />
       </div>
     </aside>

@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import LayoutUserDropDown from './UserDropDown'
 import Notifications from './Notifications'
 import Apps from './Apps'
+import HeaderLogo from './HeaderLogo'
 
 const DefaultLayoutHeader = ({ open, setOpen }: { open: boolean, setOpen: React.Dispatch<React.SetStateAction<boolean>> }) => {
     return (
@@ -15,7 +16,6 @@ const DefaultLayoutHeader = ({ open, setOpen }: { open: boolean, setOpen: React.
                     <div className="flex items-center justify-between">
                         <div className="flex items-center">
                             <button onClick={() => setOpen(!open)} className="mr-3 cursor-pointer rounded p-2 text-gray-600 hover:bg-gray-600 hover:text-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white lg:inline">
-
                                 <svg
                                     aria-hidden="true"
                                     className="w-6 h-6"
@@ -30,12 +30,7 @@ const DefaultLayoutHeader = ({ open, setOpen }: { open: boolean, setOpen: React.
                                     />
                                 </svg>
                             </button>
-                            <Link className="flex items-center" to="/">
-                                <img className="logo mr-3 h-6 sm:h-8" src="https://flowbite.s3.amazonaws.com/logo.svg" alt="send-logo" />
-                                <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                saveit.
-                            </span>
-                            </Link>
+                          <HeaderLogo />
                             <div className="ml-16 hidden md:block">
                                 <div className="flex items-center px-4">
                                     <AccountSwitcher />

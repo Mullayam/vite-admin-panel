@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link  } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import LayoutSidebar from './components/Sidebar'
 import LayoutUserDropDown from './components/UserDropDown'
 import Apps from './components/Apps'
@@ -8,14 +8,16 @@ import AccountSwitcher from '../shared/account-switcher'
 import { Search } from '../shared/search'
 import { ThemeToggle } from '../theme/theme-toggle'
 import BackgroundLayer from '../shared/bg-layer'
- 
- 
-const RootLayout = ({children}:{children: React.ReactNode}) => {
-  
+import HeaderLogo from './components/HeaderLogo'
+import CookiesCard from '../shared/cookiesCard'
+
+
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
+
     return (
         <div className="antialiased bg-transparent">
             <BackgroundLayer />
-            <nav className="bg-transparent border-b border-gray-200 px-4 py-2.5   dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
+            <nav className="bg-transparent border-b border-gray-200 px-4 py-2.5  dark:border-gray-700 fixed left-0 right-0 top-0 z-50">
                 <div className="flex flex-wrap justify-between items-center">
                     <div className="flex justify-start items-center">
                         <button
@@ -52,32 +54,19 @@ const RootLayout = ({children}:{children: React.ReactNode}) => {
                             </svg>
                             <span className="sr-only">Toggle sidebar</span>
                         </button>
-                        <Link
-                             to={"/"}
-                            className="flex items-center justify-between mr-4"
-                        >
-                            <img
-                                src="https://flowbite.s3.amazonaws.com/logo.svg"
-                                className="mr-3 h-8"
-                                alt="Flowbite Logo"
-                            />
-                            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                saveit.
-                            </span>
-                        </Link>
+                        <HeaderLogo className='mr-16' />
                         <div className="ml-16 hidden md:block">
-                                <div className="flex items-center px-4">
-                                    <AccountSwitcher />
-                                    <Search />
-                                    <Link
-                                        to="/settings"
-                                        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hidden lg:block md:block px-4"
-                                    >
-                                        Settings
-                                    </Link>
-
-                                </div>
+                            <div className="flex items-center px-4">
+                                <AccountSwitcher />
+                                <Search />
+                                <Link
+                                    to="/settings"
+                                    className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hidden lg:block md:block px-4"
+                                >
+                                    Settings
+                                </Link>
                             </div>
+                        </div>
                     </div>
                     <div className="flex items-center lg:order-2">
                         <Notifications />
@@ -87,10 +76,12 @@ const RootLayout = ({children}:{children: React.ReactNode}) => {
                     </div>
                 </div>
             </nav>
+
             <LayoutSidebar />
             <main className="p-4 md:ml-64 h-auto pt-20">
-              {children}
+                {children}
             </main>
+            <CookiesCard type='modal'/>
         </div>
 
     )

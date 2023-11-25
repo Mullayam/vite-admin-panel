@@ -23,7 +23,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
                 <nav className="order-first">
                     <DefaultLeftSidbar open={open} />
                 </nav>
-                <aside className="hidden lg:block overflow-y-auto border-l border-slate-700">
+                <aside className="hidden lg:block overflow-y-auto border-l dark:border-slate-700 border-gray-100">
                     <RightSidebar />
                 </aside>
             </div>

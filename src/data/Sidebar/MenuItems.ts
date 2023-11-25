@@ -1,4 +1,4 @@
-import {   GanttChartSquare, MessageSquareDashed, MessagesSquare, SendHorizontalIcon } from "lucide-react";
+import { GanttChartSquare, MessageSquareDashed, MessagesSquare, SendHorizontalIcon } from "lucide-react";
 import { Icons } from "@/components/icons";
 export const SidebarMenuItems = [
     {
@@ -17,14 +17,14 @@ export const SidebarMenuItems = [
         icon: Icons.HiUsers,
     },
     {
-        name: "SMS Panel",         
+        name: "SMS Panel",
         icon: MessageSquareDashed,
-        path:"/sms/panel",
-        child:[
+        path: "/sms/panel",
+        child: [
             {
                 name: "SMS Statistics",
                 path: "/sms/statistics",
-                icon:MessagesSquare,
+                icon: MessagesSquare,
             },
             {
                 name: "SMS Report",
@@ -38,17 +38,38 @@ export const SidebarMenuItems = [
             },
         ]
     },
-   
+
     {
-        name: "More",         
+        name: "More",
         icon: Icons.Pages,
-        path:"#",
-        child:[
+        path: "#",
+        child: [
             {
-                name: "Sms Report",
-                path: "/sms/report",
+                name: "Sign In",
+                path: "/authentication/sign-in",
                 icon: null,
-            }
+            },
+            {
+                name: "Sign Up",
+                path: "/authentication/sign-up",
+                icon: null,
+            },
+            {
+                name: "Forget-Password",
+                path: "/authentication/forget-password",
+                icon: null,
+            },
+            {
+                name: "Error 400",
+                path: "/error/not-found",
+                icon: null,
+            },
+            {
+                name: "Error 500",
+                path: "/error/server-error",
+                icon: null,
+            },
+
         ]
     },
 

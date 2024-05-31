@@ -2,7 +2,7 @@
 export default function OfferBbanner() {
   return (
     <section className="">
-      <div className="alert alert-dismissible fade show items-center justify-between  bg-red-500 px-6 py-4 text-center text-white md:flex md:text-left">
+      <div className="alert alert-dismissible rounded-lg fade show items-center justify-between  bg-red-500 px-6 py-1.5 text-center text-white md:flex md:text-left">
         <div className="mb-4 flex flex-wrap items-center justify-center md:mb-0 md:justify-start">
           <svg
             xmlns="http://www.w3.org/2000/svg"

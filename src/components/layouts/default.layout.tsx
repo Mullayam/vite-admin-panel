@@ -1,9 +1,10 @@
 import React from 'react'
-import TrialNotice from './components/TrialNotice'
-import RightSidebar from './components/RightSidebar'
+import TrialNotice from './components/default/TrialNotice'
+import RightSidebar from './components/default/RightSidebar'
 import BackgroundLayer from '../shared/bg-layer';
-import DefaultLayoutHeader from './components/DefaultLayoutHeader';
-import DefaultLeftSidbar from './components/DefaultLeftSidbar';
+import DefaultLayoutHeader from './components/default/DefaultLayoutHeader';
+import DefaultLeftSidbar from './components/default/DefaultLeftSidbar';
+import OfferBbanner from '../shared/offer-banner';
 
 const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
     const [open, setOpen] = React.useState(true);
@@ -16,7 +17,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
             {/* main container */}
             <div className="flex-1 flex flex-row overflow-y-hidden pt-16 ">
                 <main className={`flex-1 ${open ? "lg:ml-64 xl:ml-70 md:ml-64 " : "lg:ml-16 xl:ml-16 md:ml-16"} p-4 relative w-full duration-75 h-full transition-width bg-transparent overflow-y-auto`}>
-                    {/* <OfferBbanner/> */}
+                    <OfferBbanner/>
                     {children}
                 </main>
                 {/* Left Sidebar */}
